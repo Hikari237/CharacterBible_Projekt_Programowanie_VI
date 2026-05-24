@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CharacterBible.Views.StepOnePage"
+             Title="Krok 1: Energia">
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="20">
+
+            <Label Text="1. Jaką cechę ma mieć twoja postać?" FontAttributes="Bold" FontSize="22" />
+
+            <Label Text="Wpisz własną cechę LUB wybierz:" FontSize="14" TextColor="Gray" />
+            <Entry x:Name="CustomVibeEntry" Placeholder="Twoja własna cecha..." FontSize="16" />
+            <Button Text="Zatwierdź własną cechę ➡️" BackgroundColor="#27AE60" Clicked="OnCustomVibeSubmitted" />
+
+            <BoxView HeightRequest="1" Color="Gray" Margin="0,10,0,10" />
+
+            <VerticalStackLayout x:Name="VibesContainer" Spacing="8" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

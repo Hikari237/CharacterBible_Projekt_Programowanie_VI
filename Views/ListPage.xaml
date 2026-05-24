@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CharacterBible.Views.ListPage"
+             Title="character bible"
+             BackgroundColor="black">
+
+    <Grid Padding="20">
+
+        <VerticalStackLayout x:Name="MainMenuContainer" x:FieldModifier="public" VerticalOptions="Center" HorizontalOptions="Center" Spacing="25" IsVisible="True">
+
+            <Label Text="Biblia Postaci" 
+                   FontFamily="Gabriola" 
+                   FontSize="48" 
+                   TextColor="#F5A627" 
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="2" Color="#F5A627" WidthRequest="200" HorizontalOptions="Center" Margin="0,0,0,2"/>
+
+            <Button Text="LISTA POSTACI" 
+                    FontSize="20" 
+                    FontFamily="Gabriola" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#2C3E50" 
+                    TextColor="White"
+                    WidthRequest="250"
+                    HeightRequest="60"
+                    Clicked="OnOpenListSelectionClicked" />
+
+            <Label Text="Stwórz nową postać:" TextColor="Gray" HorizontalOptions="Center" Margin="0,10,0,0"/>
+
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button Text="Cyberpunk"  
+                        FontFamily="CyberoFont"  
+                        FontSize="22" 
+                        BackgroundColor="#F5A627" 
+                        Clicked="OnCreateCyberpunkClicked" 
+                        WidthRequest="140"
+                        HeightRequest="60"/>
+
+                <Button Text="Fantasy" 
+                        FontFamily="Yours" 
+                        FontSize="36" 
+                        BackgroundColor="#F5A627" 
+                        Clicked="OnCreateFantasyClicked" 
+                        Padding="0"
+                        WidthRequest="140"
+                        HeightRequest="60"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout x:Name="ListLibraryContainer" x:FieldModifier="public" VerticalOptions="Fill" Spacing="15" IsVisible="False">
+
+            <Label x:Name="ListTitleLabel" x:FieldModifier="public" Text="WYBIERZ GATUNEK DO PODGLĄDU" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,10" />
+
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button Text=" Cyberpunk" FontFamily="CyberoFont" FontSize="18" BackgroundColor="#F5A627" Clicked="OnFilterCyberpunkClicked" WidthRequest="150" />
+                <Button Text="Fantasy" FontAttributes="Bold"  FontFamily="Yours" FontSize="24" BackgroundColor="#F5A627" Clicked="OnFilterFantasyClicked" WidthRequest="150" />
+            </HorizontalStackLayout>
+
+            <ScrollView Margin="0,10,0,10" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout x:Name="CharactersContainer" Spacing="10" />
+            </ScrollView>
+
+            <Button Text="POWRÓT DO MENU" BackgroundColor="Gray" Clicked="OnBackToMenuClicked" HorizontalOptions="Center" WidthRequest="200" Margin="0,10,0,0" />
+
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

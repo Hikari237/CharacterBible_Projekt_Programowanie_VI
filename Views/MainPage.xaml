@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CharacterBible.Views.MainPage"
+             Title="Menu Główne"
+             BackgroundColor="#0D0E15">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="25">
+
+        <Label Text="CYBER-BIBLIA" 
+               FontFamily="CyberoFont" 
+               FontSize="40" 
+               TextColor="#F5A627" 
+               HorizontalOptions="Center" />
+
+        <BoxView HeightRequest="2" Color="#F5A627" WidthRequest="200" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+    
+
+        <Label Text="Stwórz nową postać:" TextColor="Gray" HorizontalOptions="Center" Margin="0,20,0,0"/>
+
+        <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+            <Button Text="Cyberpunk"  
+                    FontFamily="CyberoFont"  
+                    FontSize="22" 
+                    BackgroundColor="#F5A627" 
+                    Clicked="OnCreateCyberpunkClicked" 
+                    WidthRequest="140"
+                    HeightRequest="60"/>
+
+            <Button Text="Fantasy" 
+                    FontFamily="Yours" 
+                    FontSize="36" 
+                    BackgroundColor="#F5A627" 
+                    Clicked="OnCreateFantasyClicked" 
+                    WidthRequest="140"
+                    HeightRequest="60"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
