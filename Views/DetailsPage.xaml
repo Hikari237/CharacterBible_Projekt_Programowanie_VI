@@ -16,7 +16,7 @@
             <Label Text="Opis i notatki fabularne:" FontFamily="Gabriola" TextColor="Beige" FontAttributes="Bold" FontSize="24" />
 
             <Editor x:Name="EditorNotes" 
-                    Placeholder="Tutaj opisz postać..." 
+                    Placeholder="Tutaj opisz postać (wygląd, historia, itp)..." 
                     HeightRequest="250" 
                     AutoSize="Disabled"
                     FontSize="20"
@@ -24,9 +24,9 @@
                    
                     />
 
-            <Button Text="💾 Zapisz opis" BackgroundColor="#27AE60" Clicked="OnSaveClicked" />
-            <Button Text="🗑️ Usuń postać" BackgroundColor="#C0392B" Clicked="OnDeleteClicked" Margin="0,10,0,0" />
-            <Button Text="⬅️ Powrót do bazy" BackgroundColor="#7F8C8D" Clicked="OnBackClicked" Margin="0,10,0,0" />
+            <Button Text="Zapisz opis" BackgroundColor="#c2ffd2" Clicked="OnSaveClicked" FontFamily="Georgia" />
+            <Button Text="Usuń postać" BackgroundColor="#ffc4c2" Clicked="OnDeleteClicked" Margin="0,10,0,0" FontFamily="Georgia"  />
+            <Button Text="Powrót do bazy" BackgroundColor="#7F8C8D" Clicked="OnBackClicked" Margin="0,10,0,0" FontFamily="Georgia"  />
 
         </VerticalStackLayout>
     </ScrollView>

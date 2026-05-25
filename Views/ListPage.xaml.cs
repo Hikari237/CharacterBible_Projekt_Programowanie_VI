@@ -8,16 +8,21 @@ public partial class ListPage : ContentPage
     public ListPage()
     {
         InitializeComponent();
+
+        MainMenuContainer.IsVisible = true;
+        ListLibraryContainer.IsVisible = false;
     }
 
     private void OnCreateCyberpunkClicked(object sender, EventArgs e)
     {
-        Application.Current.Windows[0].Page = new StepZeroPage("cyber_data.json", "Cyberpunk");
+        if (Application.Current?.Windows.Count > 0)
+            Application.Current.Windows[0].Page = new StepZeroPage("cyber_data.json", "Cyberpunk");
     }
 
     private void OnCreateFantasyClicked(object sender, EventArgs e)
     {
-        Application.Current.Windows[0].Page = new StepZeroPage("fantasy_data.json", "Fantasy");
+        if (Application.Current?.Windows[0] != null)
+            Application.Current.Windows[0].Page = new StepZeroPage("fantasy_data.json", "Fantasy");
     }
 
     private void OnOpenListSelectionClicked(object sender, EventArgs e)
@@ -62,13 +67,18 @@ public partial class ListPage : ContentPage
             var btn = new Button
             {
                 Text = $"{character.Name} ({character.Role})",
-                BackgroundColor = Color.Parse("#2C3E50"),
+                BackgroundColor = Color.Parse("#9e9e9e"),
+                TextColor = Color.Parse("#000000"),
+                FontFamily = "Gabriola",
+                FontSize = 26,
+                HeightRequest = 55,
                 HorizontalOptions = LayoutOptions.Fill,
-                Margin = new Thickness(0, 0, 0, 5)
+                Margin = new Thickness(0, 0, 0, 6)
             };
 
             btn.Clicked += (s, e) => {
-                Application.Current.Windows[0].Page = new DetailsPage(character);
+                if (Application.Current?.Windows.Count > 0)
+                    Application.Current.Windows[0].Page = new DetailsPage(character);
             };
 
             CharactersContainer.Children.Add(btn);
@@ -77,6 +87,7 @@ public partial class ListPage : ContentPage
 
     private void OnBackToMenuClicked(object sender, EventArgs e)
     {
+        // Powrót do menu: ukrywamy bibliotekê, pokazujemy menu g³ówne
         ListLibraryContainer.IsVisible = false;
         MainMenuContainer.IsVisible = true;
     }

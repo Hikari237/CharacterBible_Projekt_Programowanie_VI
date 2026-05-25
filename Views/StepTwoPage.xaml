@@ -7,11 +7,11 @@
     <ScrollView Padding="20">
         <VerticalStackLayout Spacing="20">
 
-            <Label Text="2. Jaką rolę pełni w świecie?" FontAttributes="Bold" FontSize="22" />
+            <Label Text="Wybierz rolę:" FontAttributes="Bold" FontSize="22" />
 
             <Label Text="Wpisz własną rolę LUB wybierz z bazy poniżej:" FontSize="14" TextColor="Gray" />
             <Entry x:Name="CustomRoleEntry" Placeholder="Twoja własna profesja..." FontSize="16" />
-            <Button Text="Zatwierdź własną rolę i ZAPISZ ➡️" BackgroundColor="#27AE60" Clicked="OnCustomRoleSubmitted" />
+            <Button Text="ZAPISZ" BackgroundColor="Beige" Clicked="OnCustomRoleSubmitted" FontFamily=" Gabriola" FontSize="20" />
 
             <BoxView HeightRequest="1" Color="Gray" Margin="0,10,0,10" />
 

@@ -12,17 +12,17 @@
             <Label Text="Biblia Postaci" 
                    FontFamily="Gabriola" 
                    FontSize="48" 
-                   TextColor="#F5A627" 
+                   TextColor="Beige" 
                    HorizontalOptions="Center" />
 
-            <BoxView HeightRequest="2" Color="#F5A627" WidthRequest="200" HorizontalOptions="Center" Margin="0,0,0,2"/>
+            <BoxView HeightRequest="2" Color="Beige" WidthRequest="200" HorizontalOptions="Center" Margin="0,0,0,2"/>
 
             <Button Text="LISTA POSTACI" 
                     FontSize="20" 
                     FontFamily="Gabriola" 
                     FontAttributes="Bold"
-                    BackgroundColor="#2C3E50" 
-                    TextColor="White"
+                    BackgroundColor="Beige" 
+                    TextColor="Black"
                     WidthRequest="250"
                     HeightRequest="60"
                     Clicked="OnOpenListSelectionClicked" />
@@ -33,7 +33,7 @@
                 <Button Text="Cyberpunk"  
                         FontFamily="CyberoFont"  
                         FontSize="22" 
-                        BackgroundColor="#F5A627" 
+                        BackgroundColor="Beige" 
                         Clicked="OnCreateCyberpunkClicked" 
                         WidthRequest="140"
                         HeightRequest="60"/>
@@ -41,7 +41,7 @@
                 <Button Text="Fantasy" 
                         FontFamily="Yours" 
                         FontSize="36" 
-                        BackgroundColor="#F5A627" 
+                        BackgroundColor="Beige" 
                         Clicked="OnCreateFantasyClicked" 
                         Padding="0"
                         WidthRequest="140"
@@ -50,22 +50,25 @@
 
         </VerticalStackLayout>
 
-        <VerticalStackLayout x:Name="ListLibraryContainer" x:FieldModifier="public" VerticalOptions="Fill" Spacing="15" IsVisible="False">
+        <Grid x:Name="ListLibraryContainer" x:FieldModifier="public" IsVisible="False" RowDefinitions="Auto,Auto,*,Auto">
 
-            <Label x:Name="ListTitleLabel" x:FieldModifier="public" Text="WYBIERZ GATUNEK DO PODGLĄDU" TextColor="White" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,10" />
+            <Label Grid.Row="0" x:Name="ListTitleLabel" x:FieldModifier="public" Text="WYBIERZ GATUNEK DO PODGLĄDU" TextColor="White" FontSize="36" FontFamily="Gabriola" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,10" />
 
-            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
-                <Button Text=" Cyberpunk" FontFamily="CyberoFont" FontSize="18" BackgroundColor="#F5A627" Clicked="OnFilterCyberpunkClicked" WidthRequest="150" />
-                <Button Text="Fantasy" FontAttributes="Bold"  FontFamily="Yours" FontSize="24" BackgroundColor="#F5A627" Clicked="OnFilterFantasyClicked" WidthRequest="150" />
+            <HorizontalStackLayout Grid.Row="1" Spacing="15" HorizontalOptions="Center" Margin="0,0,0,10">
+                <Button Text="Cyberpunk" FontFamily="CyberoFont" FontSize="18" BackgroundColor="Beige" TextColor="Black" Clicked="OnFilterCyberpunkClicked" WidthRequest="150" />
+                <Button Text="Fantasy" FontAttributes="Bold" FontFamily="Yours" FontSize="24" BackgroundColor="Beige" TextColor="Black" Clicked="OnFilterFantasyClicked" WidthRequest="150" />
             </HorizontalStackLayout>
 
-            <ScrollView Margin="0,10,0,10" VerticalOptions="FillAndExpand">
-                <VerticalStackLayout x:Name="CharactersContainer" Spacing="10" />
+            <ScrollView Grid.Row="2" VerticalOptions="FillAndExpand" Margin="0,10,0,10">
+                <VerticalStackLayout x:Name="CharactersContainer"
+                                     Spacing="10"
+                                     HorizontalOptions="Fill"
+                                     Margin="20,0,20,0" />
             </ScrollView>
 
-            <Button Text="POWRÓT DO MENU" BackgroundColor="Gray" Clicked="OnBackToMenuClicked" HorizontalOptions="Center" WidthRequest="200" Margin="0,10,0,0" />
+            <Button Grid.Row="3" Text="POWRÓT DO MENU" BackgroundColor="Beige" TextColor="black" FontFamily="Georgia" Clicked="OnBackToMenuClicked" HorizontalOptions="Center" WidthRequest="200" Margin="0,10,0,0" />
 
-        </VerticalStackLayout>
+        </Grid>
 
     </Grid>
 </ContentPage>

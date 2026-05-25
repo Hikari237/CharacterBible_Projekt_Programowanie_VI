@@ -7,11 +7,11 @@
     <ScrollView Padding="20">
         <VerticalStackLayout Spacing="20">
 
-            <Label Text="1. Jaką cechę ma mieć twoja postać?" FontAttributes="Bold" FontSize="22" />
+            <Label Text="Wybierz cechę:" FontAttributes="Bold" FontSize="36" FontFamily="Gabriola"/>
 
-            <Label Text="Wpisz własną cechę LUB wybierz:" FontSize="14" TextColor="Gray" />
-            <Entry x:Name="CustomVibeEntry" Placeholder="Twoja własna cecha..." FontSize="16" />
-            <Button Text="Zatwierdź własną cechę ➡️" BackgroundColor="#27AE60" Clicked="OnCustomVibeSubmitted" />
+            <Label Text="Wpisz LUB wybierz:" FontSize="14" TextColor="Gray" FontFamily="Gabriola" />
+            <Entry x:Name="CustomVibeEntry" Placeholder="Twoja własna cecha..." FontSize="16" FontFamily="Gabriola" />
+            <Button Text="Zatwierdź" BackgroundColor="Beige" Clicked="OnCustomVibeSubmitted" FontFamily="Gabriola" />
 
             <BoxView HeightRequest="1" Color="Gray" Margin="0,10,0,10" />
 

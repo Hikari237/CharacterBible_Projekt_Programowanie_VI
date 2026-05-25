@@ -6,13 +6,13 @@ namespace CharacterBible.Views;
 public partial class StepOnePage : ContentPage
 {
     private CharacterDraft _draft;
-    private string _jsonFileName; // Dodajemy zmienn¹
+    private string _jsonFileName; 
 
-    public StepOnePage(CharacterDraft draft, string jsonFileName) // Zmieniamy konstruktor
+    public StepOnePage(CharacterDraft draft, string jsonFileName) 
     {
         InitializeComponent();
         _draft = draft;
-        _jsonFileName = jsonFileName; // Zapisujemy
+        _jsonFileName = jsonFileName; 
         LoadVibesFromJson();
     }
 
@@ -30,7 +30,8 @@ public partial class StepOnePage : ContentPage
             var btn = new Button
             {
                 Text = vibeText,
-                BackgroundColor = Color.Parse("#2C3E50"),
+                BackgroundColor = Color.Parse("#d9c58b"),
+                FontFamily = "Gabriola",
                 HorizontalOptions = LayoutOptions.Fill 
             };
             btn.Clicked += OnVibeButtonClicked;

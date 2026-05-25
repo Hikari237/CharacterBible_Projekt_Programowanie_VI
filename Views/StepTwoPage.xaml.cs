@@ -30,7 +30,8 @@ public partial class StepTwoPage : ContentPage
             var btn = new Button
             {
                 Text = roleText,
-                BackgroundColor = Color.Parse("#2C3E50"),
+                BackgroundColor = Color.Parse("#d9c58b"),
+                FontFamily = "Gabriola",
                 HorizontalOptions = LayoutOptions.Fill
             };
             btn.Clicked += OnRoleButtonClicked;
